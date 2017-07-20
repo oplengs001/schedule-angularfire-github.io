@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schedule City</title>
+    <link rel="shortcut icon" href="http://www.iconj.com/ico/i/a/iaah65f5a6.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/sweetalert.css" />
+    <link rel="stylesheet" href="css/ngDialog.min.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.min.css">
+    <script type="text/javascript" src="scripts/angular.js"></script>
+    <script type="text/javascript" src="scripts/angular-route.js"></script>     
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script> 
+    
+    <script type="text/javascript" src="scripts/firebase.js"></script>
+    <script type="text/javascript"src="scripts/firebase.js"></script>
+    <script type="text/javascript"src="scripts/angularfire.min.js"></script>
+    <script type="text/javascript"src="scripts/sweetalert.min.js"></script>
+     
+    <script src="scripts/ngDialog.js"></script>   
+
+
+</head>
+
+<body ng-app="myApp">
+ <header>
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/home">Scheduler</a>
+                </div>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/client"> Client</a></li>
+                    <li><a href="#/acceptor"> Acceptor</a></li>         
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+    <div id="main">
+  <div ng-view></div>
+        </div>
+
+</body>
+
+	<script type="text/ng-template" id="firstDialog">
+			<div class="ngdialog-message">
+				<center>
+				<h2>Schedule City</h2>
+				<h4>AngularJS and Firebase Exercise</h4>
+				</center>
+				<div>Click on the <strong>navigation bar</strong> above on what type of<strong> user</strong> you want to be, the following specifications below are added on the base sample code:</div>
+				<ul class="mt">
+					<li>Separate page to approve/reject before it gets booked</li>
+					<li>Improved User Experience</li>
+					<li>Authentication rule set to Public</li>
+					<li>Front end code using AngularJS, HTML, CSS</li>				
+				</ul> 
+				<div class="mt">This will measure my designing skills and speed coping up on new technologies</div>
+			</div>
+			<div class="ngdialog-buttons mt">
+				<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="closeThisDialog(0)">OK</button>
+			</div>
+		</script>
+
+	</html>

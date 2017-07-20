@@ -1,0 +1,35 @@
+
+
+<div class="container">
+  
+  <div class="page-header text-center">       
+    <h1>Schedule City</h1>        
+    <p>Real-time scheduling demo using <a href="https://firebase.com" target="_blank">Firebase</a> and <a href="https://angularjs.org" target="_blank">AngularJS</a> by <a href="https://scotch.io/tutorials/javascript/build-a-real-time-scheduling-app-using-angularjs-and-firebase" target="_blank">scotch.io</a>. 
+  </div>
+   
+  <p class="text-center">What time would you like to meet?<br><strong class="text-info">Quick! Other people are booking times too!</strong></p>
+  
+  <div class="row times">
+    
+    <div class="col-xs-4 text-center" ng-repeat="day in days">
+              
+      <h2>{{ day.name }}</h2>
+      
+      <div class="time-slot" ng-repeat="slot in day.slots">    	
+        <input type="checkbox" id="{{ day.name }}-{{ $index }}" name="{{slot.booked}}" ng-click = "showMessage(day.name,slot.time)" ng-model="slot.booked" ng-disabled="slot.booked" ng-true-value= "'Pending'" >
+          <label for="{{ day.name }}-{{ $index }}">{{ slot.time }}<br>
+          <span ng-if="slot.booked === 'Pending'">Pending</span>
+          <span ng-if="slot.booked === true">Booked</span>
+          <span ng-if="!slot.booked">Available</span>          
+        </label>
+      </div>
+    </div>        
+      
+  </div>    
+ 
+  
+ 
+</div>
+
+
+

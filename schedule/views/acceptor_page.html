@@ -1,0 +1,39 @@
+<div class="container">
+  
+  <div class="page-header text-center">       
+    <h1>Schedule City Acceptor</h1>        
+    <p>Real-time scheduling demo using <a href="https://firebase.com" target="_blank">Firebase</a> and <a href="https://angularjs.org" target="_blank">AngularJS</a> by <a href="https://scotch.io/tutorials/javascript/build-a-real-time-scheduling-app-using-angularjs-and-firebase" target="_blank">scotch.io</a>. 
+  </div>
+
+    
+  <p class="text-center">
+  Count of Online Users: {{ online }} <br>
+  <strong class="text-info">Accept or Reject Pending Request!</strong>
+  
+  </p>
+  
+  <div class="row times">
+     
+     
+    <div class="col-xs-4 text-center" ng-repeat="day in days">
+              
+      <h2>{{ day.name }}</h2>
+      
+      <div class="acctime-slot" ng-repeat="(key,slot) in day.slots">    	
+        <input type="checkbox" id="{{ day.name }}-{{ $index }}" name="{{slot.booked}}" ng-click ="showChoice(day.name , key)" ng-disabled="slot.booked !== 'Pending'">
+           
+          <label for="{{ day.name }}-{{ $index }}">{{ slot.time }}<br>
+          <span ng-if="slot.booked === 'Pending'">Pending</span>
+          <span ng-if="slot.booked === true">Booked</span>
+          <span ng-if="!slot.booked">Available</span> 
+        </label>
+      </div>
+    </div>     
+      
+  </div>    
+ 
+  
+  <p class="text-center">    
+    <a href="#/acceptor" ng-click="reset()" class="btn btn-primary">Reset</a>
+  </p>
+</div>
