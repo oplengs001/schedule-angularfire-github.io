@@ -1,6 +1,8 @@
 angular.module('myApp.controllers', [])
 
 
+
+
 .controller('MainCtrl',function($scope,$firebase,$rootScope){
 
     // get # of real time users
@@ -36,8 +38,13 @@ angular.module('myApp.controllers', [])
   
 
   $scope.showMessage = function(day,time){
-console.log(day,time);
-   swal("Thank you!", "You request to have a meeting on \n "+day+" at "+time+" \n Wait for the admin to accept your request", "success")
+
+   swal({
+  title: "Thankyou",
+  text:  "You request to have a meeting on \n "+day+" at "+time+" \n Wait for the admin to accept your request",
+  type: "success",
+  animation: "slide-from-top"
+})
   }
   
 })
@@ -60,12 +67,12 @@ console.log(day,time);
   syncObject.$bindTo($scope, 'days');
   // function to set the default data
   $scope.reset = function() {    
- 
+
     fb.$set({
       monday: {
         name: 'Monday',
         slots: {
-          900: {
+          09: {
             time: '9:00am',
             booked: false
           },
@@ -94,7 +101,7 @@ console.log(day,time);
       tuesday: {
         name: 'Tuesday',
         slots: {
-          900: {
+          09: {
             time: '9:00am',
             booked: false
           },
@@ -123,7 +130,7 @@ console.log(day,time);
       wednesday: {
         name: 'Wednesday',
         slots: {
-          900: {
+          09: {
             time: '9:00am',
             booked: false
           },
@@ -170,15 +177,17 @@ console.log(day,time);
 },
 function(isConfirm){
   if (isConfirm) {
+       swal("", "Schedule booked!", "success");
   $scope.$evalAsync(function() {
       $scope.days[day].slots[slot].booked = true;
-   swal("", "Schedule booked!", "success")
+
   });
 
   } else {
+       swal("", "Schedule Rejected!", "success");
   $scope.$evalAsync(function() {
       $scope.days[day].slots[slot].booked = false;
-   swal("", "Schedule Rejected!", "success")
+
   });
   }
 });

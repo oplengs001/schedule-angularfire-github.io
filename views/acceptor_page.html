@@ -9,25 +9,31 @@
   <p class="text-center">
   Count of Online Users: {{ online }} <br>
   <strong class="text-info">Accept or Reject Pending Request!</strong>
-  
   </p>
   
-  <div class="row times">
+  <div class="times text-center">
+    
+        <lisst>
+        <itemm class= "d-style d-margin">DAY </itemm>
+        <div class ="h-time" ng-repeat="slot in days.monday.slots">
+        <itemm>{{slot.time}}</itemm></div>
+        </lisst>  
      
-     
-    <div class="col-xs-4 text-center" ng-repeat="day in days">
-              
-      <h2>{{ day.name }}</h2>
-      
-      <div class="acctime-slot" ng-repeat="(key,slot) in day.slots">    	
+        <div ng-repeat="day in days">
+        <lisst>  
+        <itemm class="d-margin"><h2>{{ day.name }}</h2></itemm>    
+        <div class="acctime-slot" ng-repeat="(key,slot) in day.slots">     	
+        <itemm>
         <input type="checkbox" id="{{ day.name }}-{{ $index }}" name="{{slot.booked}}" ng-click ="showChoice(day.name , key)" ng-disabled="slot.booked !== 'Pending'">
            
-          <label for="{{ day.name }}-{{ $index }}">{{ slot.time }}<br>
-          <span ng-if="slot.booked === 'Pending'">Pending</span>
-          <span ng-if="slot.booked === true">Booked</span>
-          <span ng-if="!slot.booked">Available</span> 
+        <label for="{{ day.name }}-{{ $index }}">
+        <span ng-if="slot.booked === 'Pending'">Pending</span>
+        <span ng-if="slot.booked === true">Booked</span>
+        <span ng-if="!slot.booked">Available</span> 
+        </itemm>
         </label>
       </div>
+      </lisst>
     </div>     
       
   </div>    

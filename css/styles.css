@@ -1,11 +1,39 @@
-body 		 { padding-bottom:50px; }
-.times 	 { margin-bottom:50px; }
+body 		 { padding-bottom:50px; background:#EFF4F7 }
+.times 	 { margin-bottom:50px; margin-left:1% ;margin-top: 25px;}
+.d-margin { margin-right:60px;}
+
 
 /* checkbox - each time slot */
 .time-slot 				{  }
 .time-slot input 	 { display:none; }
+.h-time itemm{
+ font-family: 'Londrina Solid', cursive;
+  font-size : 25px;
+    color: #474545;
+}
+.page-header h1{
+font-family: 'Londrina Solid', cursive;
+    color: #474545;
+}
+
+ p{
+    font-family: 'Muli', sans-serif;
+    color: #474545;
+  }
+.d-style {
+  font-family: 'Londrina Solid', cursive;
+  font-size : 30px;
+  color: #474545;
+
+}
+.times h2{
+font-family: 'Londrina Solid', cursive;
+   font-size : 40px;  
+    color: #474545;
+}
 .time-slot label 	 { 
-  padding:10px 20px; 
+  
+  padding:34px 36px; 
   color:#FFF; 
   cursor:pointer; 
   background:#EEE; 
@@ -13,10 +41,11 @@ body 		 { padding-bottom:50px; }
 	transition:0.3s ease all;
   -moz-transition:0.3s ease all;
   -webkit-transition:0.3s ease all;
+  
 }
 
 .time-slot input[name='true'] ~ label{ 
-  background:#f2dede; 
+  background:#F4608A; 
   cursor:not-allowed;
   animation:flashBooked 0.5s ease; 
   -moz-animation:flashBooked 0.5s ease; 
@@ -32,15 +61,29 @@ body 		 { padding-bottom:50px; }
 }
 
 .time-slot input[name='false'] ~ label{ 
-  background:#6AB074; 
+
+  background:#49B2D6; 
   animation:flashAvailable 0.5s ease; 
   -moz-animation:flashAvailable 0.5s ease; 
   -webkit-animation:flashAvailable 0.5s ease; 
 }
+.time-slot input[name='false']  :hover{ 
+  
+  background:#F4608A; 
+  margin-left:6px;
+  padding:34px 36px; 
+  color:#FFF; 
+  cursor:pointer; 
+  border-radius:5px; 
+
+  
+}
+
+
 .acctime-slot 				{  }
 .acctime-slot input 	 { display:none; }
 .acctime-slot label 	 { 
-  padding:10px 20px; 
+  padding:34px 36px; 
   color:#FFF; 
   cursor:pointer; 
   background:#EEE; 
@@ -51,7 +94,7 @@ body 		 { padding-bottom:50px; }
 }
 
 .acctime-slot input[name='true'] ~ label{ 
-  background:#f2dede; 
+  background:#F4608A; 
   cursor:not-allowed;
   animation:flashBooked 0.5s ease; 
   -moz-animation:flashBooked 0.5s ease; 
@@ -66,11 +109,25 @@ body 		 { padding-bottom:50px; }
 }
 
 .acctime-slot input[name='false'] ~ label{ 
-  background:#6AB074; 
+  background:#49B2D6; 
   cursor:not-allowed;
   animation:flashAvailable 0.5s ease; 
   -moz-animation:flashAvailable 0.5s ease; 
   -webkit-animation:flashAvailable 0.5s ease; 
+}
+
+
+lisst {
+    
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+}
+
+lisst itemm {
+  display: block;
+    float: left;
+    width: 12%;
 }
 
 
@@ -79,15 +136,15 @@ body 		 { padding-bottom:50px; }
 
 @keyframes flashBooked {
   0%, 100% { background:#f2dede; transform:scale(1); }
-  50% 		{ background:#F99090; transform:scale(1.5); }
+  50% 		{ background:#F4608A; transform:scale(1.5); }
 }
 @-moz-keyframes flashBooked {
   0%, 100% { background:#f2dede; transform:scale(1); }
-  50% 		{ background:#F99090; transform:scale(1.5); }
+  50% 		{ background:#F4608A; transform:scale(1.5); }
 }
 @-webkit-keyframes flashBooked {
   0%, 100% { background:#f2dede; transform:scale(1); }
-  50% 		{ background:#F99090; transform:scale(1.5); }
+  50% 		{ background:#F4608A; transform:scale(1.5); }
 }
 
 @keyframes flashPending {
@@ -103,16 +160,16 @@ body 		 { padding-bottom:50px; }
   50% 		{ background:#f4f466; transform:scale(1.5); }
 }
 @keyframes flashAvailable {
-  0%, 100% { background:#6AB074; transform:scale(1); }
-  50% 		{ background:rgb(119, 218, 78); transform:scale(1.5); }
+  0%, 100% { background:#7ED0ED; transform:scale(1); }
+  50% 		{ background:#45A9CB; transform:scale(1.5); }
 }
 @-moz-keyframes flashAvailable {
-  0%, 100% { background:#6AB074; transform:scale(1); }
-  50% 		{ background:rgb(119, 218, 78); transform:scale(1.5); }
+  0%, 100% { background:#7ED0ED; transform:scale(1); }
+  50% 		{ background:#45A9CB; transform:scale(1.5); }
 }
 @-webkit-keyframes flashAvailable {
-  0%, 100% { background:#6AB074; transform:scale(1); }
-  50% 		{ background:rgb(119, 218, 78); transform:scale(1.5); }
+  0%, 100% { background:#7ED0ED; transform:scale(1); }
+  50% 		{ background:#45A9CB; transform:scale(1.5); }
 }
 
 
