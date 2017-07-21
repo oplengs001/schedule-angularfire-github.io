@@ -26,6 +26,30 @@ font-family: 'Londrina Solid', cursive;
   color: #474545;
 
 }
+
+.button-g{
+ background-color: #49B2D6; /* Green */
+    margin-top: 20px;
+    margin-left: 40%;
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button-g:hover {background-color: #33809b}
+
+.button-g:active {
+  background-color: #33809b;
+  box-shadow: 0 5px #5b7c87;
+  transform: translateY(4px);
+}
+.co-border{
+  border-color: #474545;
+  border: 4px solid ;
+}
 .times h2{
 font-family: 'Londrina Solid', cursive;
    font-size : 40px;  

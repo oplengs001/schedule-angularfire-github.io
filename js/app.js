@@ -16,10 +16,10 @@ angular.module('myApp', [ 'myApp.controllers','myApp.routes','firebase','ngDialo
 
         $rootScope.slides = [
     {
-      image: 'sshots/s1.jpg',description: 'click on the Navigation bar above on what type of user you want to be.'
+      image: 'sshots/s1.jpg',description: 'Navigation bar will let you choose what type of user you want to be.'
     },
     {
-      image: 'sshots/s2.jpg',description: 'click on the available time slots for clients to have a request on the admin'
+      image: 'sshots/s2.jpg',description: 'click on the available time slots for you to have a request on the Acceptor'
     },
     {
       image: 'sshots/s3.jpg',description: 'Acceptor page indicates real-time online users'
